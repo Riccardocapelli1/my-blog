@@ -2,10 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://riccardocapelli1.github.io/my_blog/categories/</loc>
+    <loc>https://riccardocapelli1.github.io/my_blog/fabric1/</loc>
+    <lastmod>2023-07-17T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://riccardocapelli1.github.io/my_blog/</loc>
+    <lastmod>2023-07-17T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://riccardocapelli1.github.io/my_blog/tags/fabric/</loc>
+    <lastmod>2023-07-17T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://riccardocapelli1.github.io/my_blog/tags/</loc>
+    <lastmod>2023-07-17T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://riccardocapelli1.github.io/my_blog/categories/</loc>
   </url>
 </urlset>
