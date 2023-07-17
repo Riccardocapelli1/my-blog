@@ -1,0 +1,8 @@
+services:
+  server:
+      image: klakegg/hugo:0.100.2-ext-alpine
+      command: server -D --poll 700ms
+      volumes:
+        - ".:/src"
+      ports:
+        - "1313:1313"

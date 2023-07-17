@@ -1,0 +1,78 @@
+---
+title: "The fourth way: Ingesting data in Fabric using Parquet files"
+date: 2023-07-17T11:30:03+00:00
+weight: 2
+#aliases: ["/fabric"]
+tags: ["fabric"]
+author: "Me"
+# author: ["Me", "You"] # multiple authors
+showToc: true
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
+description: "Load Data to Ms Fabric Local SQL Server"
+canonicalURL: "https://canonical.url/fabric/"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: false
+UseHugoToc: true
+cover:
+    image: "<image path/url>" # image path/url
+    alt: "<alt text>" # alt text
+    caption: "<text>" # display caption under cover
+    relative: false # when using page bundles set this to true
+    hidden: true # only hide on current single page
+editPost:
+    URL: "https://github.com/Riccardocapelli1/data-stack-wall/issues"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+---
+To load data into Microsoft Fabric using Parquet files from a local SQL Server database, we will use Python with the pyarrow, pandas, and sqlalchemy libraries. This method ensures that the data remains unexposed to the global network, providing enhanced security. Additionally, we will leverage the OneLake access function with file explorer, making the process efficient and straightforward.
+
+#### Prerequisites
+Before proceeding, ensure that you have the following prerequisites in place:
+
+Python installed on your system. You can download Python from the official website: python.org.
+Required Python Packages: pyarrow, pandas, sqlalchemy, and tqdm. Install them using pip:
+
+ ```py
+pip install pyarrow pandas sqlalchemy tqdm
+ ```
+
+
+A local SQL Server database containing the data you want to load into Microsoft Fabric.
+Microsoft Fabric set up and configured on your system.
+The Python Script
+Below is the Python script to load data into Microsoft Fabric using Parquet files:
+
+ ```py
+Copy code
+import time
+import pyarrow.parquet as pq
+import pandas as pd
+import pyarrow as pa
+from sqlalchemy import create_engine
+
+from creds import userdb, passworddb
+row_group_size = 1000000
+table_name = "your_table_name_to_query"
+columns_list = "your_column_list_to_query_from_your_db"
+
+# Rest of the script...
+ ```
+Replace the placeholders with your specific details:
+
+your_table_name_to_query: The name of the table you want to query from your database.
+your_column_list_to_query_from_your_db: The list of columns you want to query from your database.
+Conclusion
+In this guide, we introduced a new approach to load data into Microsoft Fabric using Parquet files from a local SQL Server database. By following these steps and leveraging Python's powerful libraries, you can ensure secure data loading without exposing your data to the global network. The use of Parquet files and the OneLake access function with file explorer provides an efficient and robust solution for your data loading needs.
+
+Feel free to explore further and customize the script according to your specific requirements. Happy data loading!
