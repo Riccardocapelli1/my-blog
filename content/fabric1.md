@@ -36,28 +36,23 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 ### Introduction
-Act as a tech writer. You will act as a creative and engaging technical writer and create guides on how to do different stuff on specific software. 
-The objective and most important concept of the blog article you write is to inform the reader of a new approach to load data onto Microsoft Fabric using parquet files extracted from the local Sql Server database, unexposed to the global network. The file parquet are loaded onto Ms Fabric using the killer function of OneLake access with file explorer and ingested and loaded on the datawarehouse.
-Parquet files are compressed file generated with little resources (less than 50GB of ram memory). The script I wrote is the beginning and an eploratory approach to this new product.
-They specifically suit this functionality and are the standard of the Fabric data format (delta).
 
-
-Welcome to my blog, where I share my tips and tricks on how to use various software tools and technologies. Today, I'm going to show you a fourth approach to load on-prem data onto Microsoft Fabric Lakehouse  other than:
-1. Dataflow Gen2
+Welcome to my new blog, where I share my experience over data and analytics engineering and technologies. Today, I'm going to show you a fourth approach to load on-prem data onto Microsoft Fabric Lakehouse other than the standard one provided:
+1. Dataflow Gen2 Pipelines
 2. Data Pipelines
 3. Jupiter Notebooks
 
-I show you how to use parquet files to migrate a Sql Server database unexposed to the global network. This is a great way to leverage the power of OneLake access with file explorer and ingest and load data on the datawarehouse.
+I show you how to use python to migrate a Sql Server database unexposed to the global network. This is a great way to leverage the power of OneLake access to file explorer, ingesting and loading data on the Fabric datawarehouse.
 
 ### What are parquet files and why are they useful?
 
 Parquet files are a columnar storage format that allows for efficient compression and encoding of data. They are especially suited for analytical queries, as they can reduce the amount of data scanned and improve performance. Parquet files are also compatible with many data processing frameworks, such as Spark, Hive, and Presto.
 
-Parquet files can be are generated with little resources (a powerful workstation can fit the workload). The script I wrote is the beginning and an exploratory approach to this new product. You can find the script here: https://github.com/Riccardocapelli1/my_blog/tree/main/python 
+Parquet files can be are generated with little resources (a powerful workstation can fit the workload). The script I wrote is the beginning and an exploratory approach to this new Microsoft product. You can find the script here: https://github.com/Riccardocapelli1/my_blog/tree/main/python 
 
 ### How to load data onto Microsoft Fabric using parquet files?
 
-The process consists of three main steps:
+The process defined in the scripts consists of three main steps:
 
 1. Extract data from the local Sql Server database to a Pandas dataframe.
 2. Convert the dataframe to a parquet files.
@@ -69,17 +64,22 @@ To load data into Microsoft Fabric using Parquet files from a local SQL Server d
 #### Prerequisites
 Before proceeding, ensure that you have the following prerequisites in place:
 
-Python installed on your system. You can download Python from the official website: python.org.
+#### Python 
+installed on your system. You can download Python from the official website: python.org.
 Required Python Packages: pyarrow, pandas, sqlalchemy, and tqdm. Install them using pip:
 
  ```py
-pip install pyarrow pandas sqlalchemy tqdm
+pip install pyarrow 
+pip install pandas 
+pip install sqlalchemy 
+pip install tqdm
  ```
 
+#### A SQL Server instance 
+hosting a database containing the data you want to load into Microsoft Fabric.
+Microsoft Fabric is at the moment I write this post in trial-only access.
 
-A local SQL Server database containing the data you want to load into Microsoft Fabric.
-Microsoft Fabric set up and configured on your system.
-The Python Script
+#### The Python Script
 Below is the Python script to load data into Microsoft Fabric using Parquet files:
 
  ```py
@@ -91,17 +91,20 @@ import pyarrow as pa
 from sqlalchemy import create_engine
 
 from creds import userdb, passworddb
-row_group_size = 1000000
+row_group_size = 5000
 table_name = "your_table_name_to_query"
 columns_list = "your_column_list_to_query_from_your_db"
 
 # Rest of the script...
  ```
+
 Replace the placeholders with your specific details:
 
 your_table_name_to_query: The name of the table you want to query from your database.
 your_column_list_to_query_from_your_db: The list of columns you want to query from your database.
-Conclusion
-In this guide, we introduced a new approach to load data into Microsoft Fabric using Parquet files from a local SQL Server database. By following these steps and leveraging Python's powerful libraries, you can ensure secure data loading without exposing your data to the global network. The use of Parquet files and the OneLake access function with file explorer provides an efficient and robust solution for your data loading needs.
 
-Feel free to explore further and customize the script according to your specific requirements. Happy data loading!
+### Conclusion
+In this guide, we introduced a new exploratory approach to load data into Microsoft Fabric using Parquet files from a local SQL Server database (I tried with a 25GB table with very good performances). By following these steps and leveraging Python libraries, you can ensure secure data loading without exposing your data to the global network. The use of Parquet files and the OneLake access function with file explorer provides an efficient and robust solution for your data loading needs. Moreover, in case computational cost are added to converting SQL Server tables to Parquet files, that's dodged by doing it in local environment.
+
+This is the first blog of a series, where I will describe further how to explore and customize the script according to your specific requirements, how I would make them work and orchestrate in a local/hybrid data architecture. 
+Happy data loading!
