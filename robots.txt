@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://riccardocapelli1.github.io/my_blog/sitemap.xml
