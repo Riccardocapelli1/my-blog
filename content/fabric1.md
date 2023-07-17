@@ -35,6 +35,35 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+### Introduction
+Act as a tech writer. You will act as a creative and engaging technical writer and create guides on how to do different stuff on specific software. 
+The objective and most important concept of the blog article you write is to inform the reader of a new approach to load data onto Microsoft Fabric using parquet files extracted from the local Sql Server database, unexposed to the global network. The file parquet are loaded onto Ms Fabric using the killer function of OneLake access with file explorer and ingested and loaded on the datawarehouse.
+Parquet files are compressed file generated with little resources (less than 50GB of ram memory). The script I wrote is the beginning and an eploratory approach to this new product.
+They specifically suit this functionality and are the standard of the Fabric data format (delta).
+
+
+Welcome to my blog, where I share my tips and tricks on how to use various software tools and technologies. Today, I'm going to show you a fourth approach to load on-prem data onto Microsoft Fabric Lakehouse  other than:
+1. Dataflow Gen2
+2. Data Pipelines
+3. Jupiter Notebooks
+
+I show you how to use parquet files to migrate a Sql Server database unexposed to the global network. This is a great way to leverage the power of OneLake access with file explorer and ingest and load data on the datawarehouse.
+
+### What are parquet files and why are they useful?
+
+Parquet files are a columnar storage format that allows for efficient compression and encoding of data. They are especially suited for analytical queries, as they can reduce the amount of data scanned and improve performance. Parquet files are also compatible with many data processing frameworks, such as Spark, Hive, and Presto.
+
+Parquet files can be are generated with little resources (a powerful workstation can fit the workload). The script I wrote is the beginning and an exploratory approach to this new product. You can find the script here: https://github.com/Riccardocapelli1/my_blog/tree/main/python 
+
+### How to load data onto Microsoft Fabric using parquet files?
+
+The process consists of three main steps:
+
+1. Extract data from the local Sql Server database to a Pandas dataframe.
+2. Convert the dataframe to a parquet files.
+3. write the parquet file into a folder.
+
+
 To load data into Microsoft Fabric using Parquet files from a local SQL Server database, we will use Python with the pyarrow, pandas, and sqlalchemy libraries. This method ensures that the data remains unexposed to the global network, providing enhanced security. Additionally, we will leverage the OneLake access function with file explorer, making the process efficient and straightforward.
 
 #### Prerequisites
