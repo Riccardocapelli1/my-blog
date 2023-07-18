@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Who Am I</title>
+      <link>https://riccardocapelli1.github.io/my_blog/whoami/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      
+      <guid>https://riccardocapelli1.github.io/my_blog/whoami/</guid>
+      <description>Doing what I love</description>
+    </item>
+    
+    <item>
       <title>Two approaches to generate Parquet files from on-prem databases</title>
       <link>https://riccardocapelli1.github.io/my_blog/fabric2/</link>
       <pubDate>Tue, 18 Jul 2023 11:30:03 +0000</pubDate>
