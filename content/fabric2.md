@@ -37,7 +37,7 @@ editPost:
 ---
 In this guide, firstly I will share my experience trying several approaches to create Parquet files from SQL Server tables, then we'll explore in detail how to efficiently extract and convert data using PyArrow.
 
-All the code is available here: https://github.com/Riccardocapelli1/my_blog/tree/main/python
+All my attemps with the code is available here: https://github.com/Riccardocapelli1/my_blog/tree/main/python
 
 ### My experience
 

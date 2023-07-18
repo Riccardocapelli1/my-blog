@@ -11,7 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Load Data to Ms Fabric Local SQL Server"
+description: "Load Data to Ms Fabric From On-prem SQL Server"
 canonicalURL: "https://canonical.url/fabric/"
 disableHLJS: true # to disable highlightjs
 disableShare: false

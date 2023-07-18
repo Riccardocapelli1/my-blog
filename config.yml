@@ -17,7 +17,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Fabric experience
-  description: "My Microsoft Fabric experience"
+  description: "My Microsoft Fabric, GCP, Kubernetes and Terraform experiences"
   keywords: [Blog, Portfolio, PaperMod]
   author: Me
   # author: ["Me", "You"] # multiple authors
@@ -59,8 +59,8 @@ params:
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
+    title: DataStack
+    subtitle: "My experience working with data"
     imageUrl: "<img location>"
     imageWidth: 120
     imageHeight: 120
@@ -74,7 +74,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: Welcome to my blog, where I share content from my experience working with data
 
   socialIcons:
     - name: linkedin
