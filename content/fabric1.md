@@ -1,7 +1,7 @@
 ---
 title: "The fourth way: Ingesting data in Fabric using Parquet files"
 date: 2023-07-17T11:30:03+00:00
-weight: 2
+weight: 1
 #aliases: ["/fabric"]
 tags: ["fabric"]
 author: "Riccardo Capelli"

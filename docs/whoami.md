@@ -3,7 +3,7 @@ title: "Who Am I"
 date: 2020-09-15T11:30:03+00:00
 weight: 1
 #aliases: ["/fabric"]
-tags: ["fabric"]
+tags: ["whoami"]
 author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -11,7 +11,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
+description: "Doing what I love"
 canonicalURL: "https://canonical.url/fabric/"
 disableHLJS: true # to disable highlightjs
 disableShare: false
@@ -35,3 +35,4 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+Passionate Analytics Engineer with desire to share knowledge and work experience to the community | (dbt, SQL, Python, git, CI-CD) & BI (Power BI, IBM Cognos, SAP BO) | Empower organizations become data-driven building revenue growth and cost optimization solutions
