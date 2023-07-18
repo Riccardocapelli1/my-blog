@@ -21,5 +21,5 @@ docker run --rm -v C:/Projects/hugo/my_blog/:/src/ klakegg/hugo:0.100.2-ext-alpi
 
 docker ps
 docker exec -it 3bf51a685d2e bash
-hugo new post MsFabric1.md
-hugo new --kind post docs/MsFabric1.md
+hugo new post MsFabric2.md
+hugo new --kind post fabric3.md

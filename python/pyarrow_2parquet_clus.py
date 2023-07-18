@@ -10,14 +10,14 @@ from tqdm import tqdm
 import os
 
 from creds import userdb, passworddb
-row_group_size = 1000000
+row_group_size = 10000
 table_name = "your table name to query"
 columns_list = "your column list to query from your db"
 
 def main():
     start_time = time.time()
     schema = generate_schema()
-    output_folder = r'C:\BIsource\parquet\py\data'
+    output_folder = r'C:\your_path_goes_here'
     total_partitions = 0
 
     dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@NavTest")

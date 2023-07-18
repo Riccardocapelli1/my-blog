@@ -4,7 +4,7 @@ date: 2023-07-17T11:30:03+00:00
 weight: 2
 #aliases: ["/fabric"]
 tags: ["fabric"]
-author: "Me"
+author: "Riccardo Capelli"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
@@ -31,7 +31,7 @@ cover:
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
 editPost:
-    URL: "https://github.com/Riccardocapelli1/data-stack-wall/issues"
+    URL: "https://github.com/Riccardocapelli1/my_blog/issues"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
@@ -83,7 +83,6 @@ Microsoft Fabric is at the moment I write this post in trial-only access.
 Below is the Python script to load data into Microsoft Fabric using Parquet files:
 
  ```py
-Copy code
 import time
 import pyarrow.parquet as pq
 import pandas as pd

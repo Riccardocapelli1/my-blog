@@ -1,4 +1,4 @@
--# duck
+-# duckdb
 
 import time
 import duckdb
@@ -20,7 +20,7 @@ duckdb_conn = duckdb.connect()
 def main():
     start_time = time.time()
     schema = generate_schema()
-    output_folder = r'C:\Projects\duckdb_parquet\py\data'
+    output_folder = r'C:\your_path_goes_here'
     total_partitions = 0
 
     dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@NavTest")
