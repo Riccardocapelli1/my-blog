@@ -12,21 +12,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 18 Jul 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://riccardocapelli1.github.io/my_blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Two approaches to generate Parquet files from on-prem databases</title>
-      <link>https://riccardocapelli1.github.io/my_blog/fabric2/</link>
-      <pubDate>Tue, 18 Jul 2023 11:30:03 +0000</pubDate>
-      
-      <guid>https://riccardocapelli1.github.io/my_blog/fabric2/</guid>
-      <description>Exporting Parquet files using Pandas, Apache Arrows, Duckdb</description>
-    </item>
-    
-    <item>
       <title>The fourth way: Ingesting data in Fabric using Parquet files</title>
       <link>https://riccardocapelli1.github.io/my_blog/fabric1/</link>
       <pubDate>Mon, 17 Jul 2023 11:30:03 +0000</pubDate>
       
       <guid>https://riccardocapelli1.github.io/my_blog/fabric1/</guid>
       <description>Load Data to Ms Fabric Local SQL Server</description>
+    </item>
+    
+    <item>
+      <title>Two approaches to generate Parquet files from on-prem databases</title>
+      <link>https://riccardocapelli1.github.io/my_blog/fabric2/</link>
+      <pubDate>Tue, 18 Jul 2023 11:30:03 +0000</pubDate>
+      
+      <guid>https://riccardocapelli1.github.io/my_blog/fabric2/</guid>
+      <description>Exporting Parquet files using Pandas, Apache Arrows, Duckdb</description>
     </item>
     
   </channel>
