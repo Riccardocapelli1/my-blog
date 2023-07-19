@@ -119,7 +119,7 @@ columns_list = "your column list to query from your db"
 def main():
     start_time = time.time()
     schema = generate_schema()
-    output_folder = r'C:\BIsource\Parquet\py\data'
+    output_folder = r'C:\your_path_goes_here'
     total_partitions = 0
 
     dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@NavTest")
@@ -170,7 +170,7 @@ def generate_schema():
     fields = []
 
     for column_name, column_type in df.dtypes.items():
-        if column_type == 'datetime64[ms]':
+        if column_type == 'datetime64[ns]':
             field_type = pa.timestamp('ms', tz=None)  # Specify the timezone as None
         elif column_type == 'object':
             field_type = pa.string()

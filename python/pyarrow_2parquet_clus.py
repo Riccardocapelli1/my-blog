@@ -68,7 +68,7 @@ def generate_schema():
     fields = []
 
     for column_name, column_type in df.dtypes.items():
-        if column_type == 'datetime64[ms]':
+        if column_type == 'datetime64[ns]':
             field_type = pa.timestamp('ms', tz=None)  # Specify the timezone as None
         elif column_type == 'object':
             field_type = pa.string()
