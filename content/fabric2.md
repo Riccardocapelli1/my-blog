@@ -46,24 +46,24 @@ It took me several attempts to define the approach that suited me better. Here a
 1. without clustering the output
 2. clustering results with the standard Apache Arrow library
 3. clustering results with concurrent threads (using ThreadPoolExecutor() from concurrent) 
-4. clustering result with with DuckDB
+4. clustering results with with DuckDB
 
 ### Without clustering the output
 It is effective with small tables (less than 2/3GB size). RAM and CPUs of your workstation won't get stressed for too long. It fits perfectly dimension table (i.e. items, vendors, location) of small size.
 
-### Clustering result with the standard apache arrow library
-The script result pretty effective with bigger tables (>5GB). It clusters effectively the resultset by providing a field (generally dates fit well) and distribut the workload without stessing RAM and CPUs. It can be done by a single workstation (I tried with a 25GB table). 
+### Clustering results with the standard apache arrow library
+The script is pretty effective with bigger tables (>5GB). It clusters effectively the resultset by providing a field (generally dates fit well) and distribut the workload without stessing RAM and CPUs. It can be done by a single workstation (I tried with a 25GB table). 
 
-### Clustering result with concurrent threads (using ThreadPoolExecutor() from concurrent) 
+### Clustering results with concurrent threads (using ThreadPoolExecutor() from concurrent) 
 I expected the outcome to improve performance while converting data to the Parquet format, but that wasn't the case. Unfortunately, I didn't have luck.
 
-### Clustering result with DuckDB
+### Clustering results with DuckDB
 Despite loving DuckDB, the performance improvement was very little overall (6 seconds), and the concurrent threads isn't exploited. I noticed that the Parquet file size was slightly bigger.
 
 
 ### Overview of the Code:
 
-The provided Python script demonstrates a method to extract data from a facts table on Microsoft SQL Server database, cluster the result based on a date column that distributes equally over the rows (more or less), and then store it as Parquet files using PyArrow. Here's a step-by-step explanation of the script's technical aspects:
+The provided Python script demonstrates a method to extract data from a facts table on Microsoft SQL Server database, cluster the output based on a date column that distributes equally over the rows (more or less), and then store it as Parquet files using PyArrow. Here's a step-by-step explanation of the script's technical aspects:
 
 Importing Dependencies: The script begins by importing essential libraries like time, pyarrow, pandas, sqlalchemy, datetime, tqdm, and os.
 
@@ -83,7 +83,7 @@ Data Extraction and Parquet Conversion (main): The main function is responsible 
 
 Columnar Storage: Parquet files store data in a columnar format, which significantly reduces disk I/O and improves query performance for analytical workloads.
 
-Compression Efficiency: Parquet's compression algorithms result in smaller file sizes, reducing storage costs and improving data transfer speeds.
+Compression Efficiency: Parquet's compression algorithms results in smaller file sizes, reducing storage costs and improving data transfer speeds.
 
 Optimized for Analytics: Parquet is optimized for analytics, making it an ideal choice for large-scale data processing and analytics workloads.
 
@@ -122,7 +122,7 @@ def main():
     output_folder = r'C:\your_path_goes_here'
     total_partitions = 0
 
-    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@NavTest")
+    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@your_odbc_name")
     query_min_max = f"SELECT MIN([Date Field]) AS min_date, MAX([Date Field]) AS max_date FROM {table_name}"
     min_max_df = pd.read_sql(query_min_max, dst_mssql_engine)
     min_date = min_max_df['min_date'][0]
@@ -152,7 +152,7 @@ def main():
     print(f"Total partitions: {total_partitions}")
 
 def get_data(table_name, year_month):
-    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@NavTest")
+    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@your_odbc_name")
 
     start_date = pd.to_datetime(f"{year_month}-01")
     end_date = start_date + pd.DateOffset(months=1)
@@ -163,7 +163,7 @@ def get_data(table_name, year_month):
     return df
 
 def generate_schema():
-    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@NavTest")
+    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@your_odbc_name")
     
     query_generate = f"SELECT TOP 1 {columns_list} FROM {table_name}"
     df = pd.read_sql(query_generate, dst_mssql_engine)

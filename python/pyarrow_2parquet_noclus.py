@@ -24,7 +24,7 @@ def main():
             start_row += row_group_size
 
 def get_data():
-    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@test")
+    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@your_odbc_name")
     table_name = "core.nav_item"
 
     query = f"SELECT * FROM {table_name}"

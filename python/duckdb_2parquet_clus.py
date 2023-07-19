@@ -23,7 +23,7 @@ def main():
     output_folder = r'C:\your_path_goes_here'
     total_partitions = 0
 
-    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@NavTest")
+    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@your_odbc_name")
     query_min_max = f"SELECT MIN([Date Field]) AS min_date, MAX([Date Field]) AS max_date FROM {table_name}"
     min_max_df = pd.read_sql(query_min_max, dst_mssql_engine)
     min_date = min_max_df['min_date'][0]
@@ -53,7 +53,7 @@ def main():
     print(f"Total partitions: {total_partitions}")
 
 def get_data(table_name, year_month):
-    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@NavTest")
+    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@your_odbc_name")
 
     start_date = pd.to_datetime(f"{year_month}-01")
     end_date = start_date + pd.DateOffset(months=1)
@@ -64,7 +64,7 @@ def get_data(table_name, year_month):
     return df
 
 def generate_schema():
-    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@NavTest")
+    dst_mssql_engine = create_engine(f"mssql+pyodbc://{userdb}:{passworddb}@your_odbc_name")
 
     query_generate = f"SELECT TOP 1 {columns_list} FROM {table_name}"
     df = pd.read_sql(query_generate, dst_mssql_engine)
