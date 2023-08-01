@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on ExampleSite</title>
-    <link>https://riccardocapelli1.github.io/my-blog/tags/</link>
+    <link>https://riccardocapelli1.github.io/my_blog/tags/</link>
     <description>Recent content in Tags on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://riccardocapelli1.github.io/my-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://riccardocapelli1.github.io/my-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://riccardocapelli1.github.io/my_blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://riccardocapelli1.github.io/my_blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Jul 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://riccardocapelli1.github.io/my-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://riccardocapelli1.github.io/my_blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fabric</title>
-      <link>https://riccardocapelli1.github.io/my-blog/tags/fabric/</link>
+      <link>https://riccardocapelli1.github.io/my_blog/tags/fabric/</link>
       <pubDate>Tue, 18 Jul 2023 11:30:03 +0000</pubDate>
       
-      <guid>https://riccardocapelli1.github.io/my-blog/tags/fabric/</guid>
+      <guid>https://riccardocapelli1.github.io/my_blog/tags/fabric/</guid>
       <description></description>
     </item>
     
     <item>
       <title>whoami</title>
-      <link>https://riccardocapelli1.github.io/my-blog/tags/whoami/</link>
+      <link>https://riccardocapelli1.github.io/my_blog/tags/whoami/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
-      <guid>https://riccardocapelli1.github.io/my-blog/tags/whoami/</guid>
+      <guid>https://riccardocapelli1.github.io/my_blog/tags/whoami/</guid>
       <description></description>
     </item>
     

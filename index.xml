@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ExampleSite</title>
-    <link>https://riccardocapelli1.github.io/my-blog/</link>
+    <link>https://riccardocapelli1.github.io/my_blog/</link>
     <description>Recent content on ExampleSite</description>
     <image>
       <title>ExampleSite</title>
-      <url>https://riccardocapelli1.github.io/my-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://riccardocapelli1.github.io/my-blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://riccardocapelli1.github.io/my_blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://riccardocapelli1.github.io/my_blog/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Jul 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://riccardocapelli1.github.io/my-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 11:30:03 +0000</lastBuildDate><atom:link href="https://riccardocapelli1.github.io/my_blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The fourth way: Ingesting data in Fabric using Parquet files</title>
-      <link>https://riccardocapelli1.github.io/my-blog/fabric1/</link>
+      <link>https://riccardocapelli1.github.io/my_blog/fabric1/</link>
       <pubDate>Mon, 17 Jul 2023 11:30:03 +0000</pubDate>
       
-      <guid>https://riccardocapelli1.github.io/my-blog/fabric1/</guid>
+      <guid>https://riccardocapelli1.github.io/my_blog/fabric1/</guid>
       <description>Load Data to Ms Fabric From On-prem SQL Server</description>
     </item>
     
     <item>
       <title>Who Am I</title>
-      <link>https://riccardocapelli1.github.io/my-blog/whoami/</link>
+      <link>https://riccardocapelli1.github.io/my_blog/whoami/</link>
       <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
       
-      <guid>https://riccardocapelli1.github.io/my-blog/whoami/</guid>
+      <guid>https://riccardocapelli1.github.io/my_blog/whoami/</guid>
       <description>Doing what I love</description>
     </item>
     
     <item>
       <title>Two approaches to generate Parquet files from on-prem databases</title>
-      <link>https://riccardocapelli1.github.io/my-blog/fabric2/</link>
+      <link>https://riccardocapelli1.github.io/my_blog/fabric2/</link>
       <pubDate>Tue, 18 Jul 2023 11:30:03 +0000</pubDate>
       
-      <guid>https://riccardocapelli1.github.io/my-blog/fabric2/</guid>
+      <guid>https://riccardocapelli1.github.io/my_blog/fabric2/</guid>
       <description>Exporting Parquet files using Pandas, Apache Arrows, Duckdb</description>
     </item>
     
