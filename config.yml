@@ -1,4 +1,4 @@
-baseURL: "https://riccardocapelli1.github.io/my_blog/"
+baseURL: "https://riccardocapelli1.github.io/my-blog/"
 title: ExampleSite
 paginate: 5
 theme: PaperMod
